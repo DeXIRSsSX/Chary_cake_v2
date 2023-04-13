@@ -1,0 +1,51 @@
+﻿<Page x:Class="WpfApp5.Pages.katalog"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp5.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="katalog">
+
+    <Grid>
+        <TabControl Background="White" BorderBrush="Transparent" Margin="0">
+            <TabItem Header="Каталог" BorderThickness="0" HorizontalAlignment="Left" Margin="-2,-2,0,0" Width="108">
+            </TabItem>
+            <TabItem Header="Корзина" BorderThickness="0" HorizontalAlignment="Left" Margin="-2,-2,0,0" Width="94">
+            </TabItem>
+            <TabItem Header="Заказы" BorderThickness="0" HorizontalAlignment="Left" Margin="-2,-2,0,0" Width="126">
+            </TabItem>
+            <TabItem Header="Личный кабинет" BorderThickness="0" Margin="-2,-2,-41,0">
+            </TabItem>
+        </TabControl>
+        <ListView Margin="0,25,0,0" Name="CatalogListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+             
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackPanel Orientation="Horizontal">
+            <TextBox Text="{Binding CakeName}"></TextBox>                       <!--Style="{StaticResource RedBox}"/> -->
+            <TextBox Text="{Binding CakeName}"></TextBox>
+            <TextBox Text="{Binding CakeName}"></TextBox>
+            <TextBox Text="{Binding CakeName}"></TextBox>
+            <TextBox Text="{Binding CakeName}"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" >
+            <TextBox Text="{Binding CakeName}" Margin="0,270,0,0"></TextBox>
+            <TextBox Text="{Binding CakeName}" Margin="0,270,0,0"></TextBox>
+            <TextBox Text="{Binding CakeName}" Margin="0,270,0,0"></TextBox>
+            <TextBox Text="{Binding CakeName}" Margin="0,270,0,0"></TextBox>
+            <TextBox Text="{Binding CakeName}" Margin="0,270,0,0"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" >
+            <TextBox Text="{Binding CakeName}" Margin="0,0,0,270"></TextBox>
+            <TextBox Text="{Binding CakeName}" Margin="0,0,0,270"></TextBox>
+            <TextBox Text="{Binding CakeName}" Margin="0,0,0,270"></TextBox>
+            <TextBox Text="{Binding CakeName}" Margin="0,0,0,270"></TextBox>
+            <TextBox Text="{Binding CakeName}" Margin="0,0,0,270"></TextBox>
+        </StackPanel>
+    </Grid>
+</Page>
