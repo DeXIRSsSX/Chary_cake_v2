@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp5"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         Title="SweetShop" Height="450" Width="800">
     <Grid>
-        <Frame x:Name="MainFrame"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="* "/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Image Source="/Resources/19.png" HorizontalAlignment="Left"></Image>
+        <TextBlock Text="Кондитерская" HorizontalAlignment="Center" FontSize="30" VerticalAlignment="Center" Foreground="White"></TextBlock>
+        <Grid Background="#222222" Panel.ZIndex="-2"> </Grid>
+        <Grid Background="#f7b1c0" Grid.Row="2"></Grid>
+        <Frame ContentRendered="MainFrame_ContentRendered" NavigationUIVisibility="Hidden" Grid.Row="1" x:Name="MainFrame"/>
+        <Button Content="Back" Name="BtnBack" HorizontalAlignment="Right" Margin="5" Click="BtnBack_Click"></Button>
     </Grid>
 </Window>
